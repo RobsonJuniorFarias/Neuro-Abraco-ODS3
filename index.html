@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuro-Abraço • Saúde Pública e ODS 3 (FMU)</title>
+  <meta name="description" content="Protótipo de saúde pública e bem-estar para o Transtorno do Espectro Autista (TEA), alinhado ao Objetivo de Desenvolvimento Sustentável 3 da ONU (Agenda 2030). Projeto acadêmico FMU.">
+  <link rel="icon" href="img/logo-neuroabraco.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <header>
+    <div class="top-banner-ods">
+      <span>🌱 PROJETO ACADÊMICO FMU • ALINHADO AO <strong>ODS 3 DA ONU: SAÚDE E BEM-ESTAR</strong></span>
+      <div class="acessibilidade-botoes">
+        <button id="btn-fonte-menos" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+        <button id="btn-fonte-mais" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+        <button id="btn-modo-calmo" title="Alternar modo calmo de leitura" aria-label="Modo calmo">🌿 Modo Calmo</button>
+      </div>
+    </div>
+    
+    <nav class="navbar">
+      <div class="logo-area" onclick="mostrarPagina('index')" role="button" tabindex="0">
+        <img src="img/logo-neuroabraco.png" alt="Logotipo Neuro-Abraço">
+        <div class="logo-textos">
+          <span class="site-name">Neuro-Abraço</span>
+          <span class="site-sub">Saúde Pública & ODS 3</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" onclick="mostrarPagina('index')">Início</a></li>
+        <li><a href="#" onclick="mostrarPagina('ods3')">ODS 3</a></li>
+        <li><a href="#" onclick="mostrarPagina('sus-guia')">Rede SUS</a></li>
+        <li><a href="#" onclick="mostrarPagina('suporte')">Níveis de Suporte</a></li>
+        <li><a href="#" onclick="mostrarPagina('cuidadores')">Saúde dos Cuidadores</a></li>
+        <li><a href="#" onclick="mostrarPagina('nutricao')">Nutrição</a></li>
+        <li><a href="#" onclick="mostrarPagina('lazer')">Lazer Sensorial</a></li>
+        <li><a href="#" onclick="mostrarPagina('academico')" class="nav-destaque">Entrega FMU</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== PÁGINA 1: INÍCIO (HOME) ==================== -->
+    <section id="index" class="pagina ativa">
+      <div class="hero-container">
+        <div class="hero-texto">
+          <div class="tag-ods-topo">
+            <span class="badge-onu">ONU Agenda 2030</span>
+            <span class="badge-ods3">ODS 3: Saúde e Bem-Estar</span>
+          </div>
+          <h1>Tecnologia a serviço da saúde integral e neurodiversidade</h1>
+          <p class="hero-lead">
+            O <strong>Neuro-Abraço</strong> é um protótipo de intervenção digital concebido no curso de Análise e Desenvolvimento de Sistemas da <strong>FMU</strong>. Nosso propósito é aproximar as famílias atípicas dos serviços públicos de saúde mental e reabilitação do <strong>SUS</strong>, democratizando o conhecimento e promovendo dignidade e qualidade de vida.
+          </p>
+
+          <div class="hero-acoes">
+            <a href="#" onclick="mostrarPagina('sus-guia')" class="btn btn-primario">🏥 Guia do SUS & Atendimentos</a>
+            <a href="#" onclick="mostrarPagina('ods3')" class="btn btn-secundario">🌍 Conhecer Alinhamento ODS 3</a>
+            <a href="#" onclick="mostrarPagina('academico')" class="btn btn-outline">📄 Ver Entrega Acadêmica</a>
+          </div>
+
+          <div class="pilares-cards">
+            <div class="pilar-item" onclick="mostrarPagina('sus-guia')">
+              <span class="pilar-num">01</span>
+              <div>
+                <strong>Acesso ao SUS</strong>
+                <p>CAPSi, CER e fluxos de triagem gratuita.</p>
+              </div>
+            </div>
+            <div class="pilar-item" onclick="mostrarPagina('cuidadores')">
+              <span class="pilar-num">02</span>
+              <div>
+                <strong>Saúde dos Cuidadores</strong>
+                <p>Apoio emocional e prevenção ao esgotamento.</p>
+              </div>
+            </div>
+            <div class="pilar-item" onclick="mostrarPagina('suporte')">
+              <span class="pilar-num">03</span>
+              <div>
+                <strong>Níveis de Apoio</strong>
+                <p>Desmistificação clínica baseada no DSM-5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-grafico">
+          <div class="card-ods-destaque">
+            <div class="ods-icone-circulo">🩺</div>
+            <h3>Saúde Pública Universal</h3>
+            <p>Conectando cidadãos às redes de acolhimento psicossocial da Grande São Paulo com base na Lei Berenice Piana.</p>
+            <div class="metas-resumo">
+              <span>🎯 Meta 3.4: Saúde Mental</span>
+              <span>🎯 Meta 3.8: Cobertura SUS</span>
+              <span>🎯 Meta 3.d: Intervenção Precoce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 2: ODS 3 ==================== -->
+    <section id="ods3" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Agenda 2030 das Nações Unidas</span>
+          <h1>ODS 3 — Saúde e Bem-Estar no Neuro-Abraço</h1>
+          <p class="subtitulo-secao">
+            "Assegurar uma vida saudável e promover o bem-estar para todas e todos, em todas as idades." Veja como o nosso projeto responde diretamente aos compromissos globais de saúde pública.
+          </p>
+        </div>
+
+        <div class="ods-metas-grid">
+          <div class="ods-meta-box meta-34">
+            <div class="meta-header">
+              <span class="tag-meta">Meta 3.4</span>
+              <h3>Saúde Mental e Bem-Estar Psíquico</h3>
+            </div>
+            <p>
+              Garantir a promoção da saúde mental e assistência a pessoas com neurodivergências e seus núcleos afetivos. No Brasil, mães e cuidadores primários de autistas apresentam altos índices de estresse crônico e depressão. O Neuro-Abraço oferece ferramentas de suporte mútuo, desmistificação e redução da sobrecarga psicológica.
+            </p>
+            <div class="meta-impacto">
+              <strong>Impacto Prático:</strong> Orientações de autocuidado, redes de suporte comunitário e descompressão emocional para a família atípica.
+            </div>
+          </div>
+
+          <div class="ods-meta-box meta-38">
+            <div class="meta-header">
+              <span class="tag-meta">Meta 3.8</span>
+              <h3>Cobertura Universal de Saúde (SUS)</h3>
+            </div>
+            <p>
+              Assegurar acesso equitativo a serviços de saúde essenciais e reabilitação de qualidade, sem gerar vulnerabilidade financeira. Terapias no setor privado para TEA possuem custos proibitivos. A plataforma ensina o passo a passo para acessar os serviços 100% gratuitos do SUS.
+            </p>
+            <div class="meta-impacto">
+              <strong>Impacto Prático:</strong> Descentralização da informação sobre CAPSi, CER, UBS e garantia dos direitos previstos na Lei Federal nº 12.764/2012.
+            </div>
+          </div>
+
+          <div class="ods-meta-box meta-3d">
+            <div class="meta-header">
+              <span class="tag-meta">Meta 3.d</span>
+              <h3>Alerta Precoce e Redução de Riscos</h3>
+            </div>
+            <p>
+              Fortalecer as capacidades de alerta precoce e gestão de riscos em saúde coletiva. A identificação de sinais nos primeiros anos e o manejo nutricional adequado previnem atrasos irreversíveis no desenvolvimento e complicações gastrointestinais crônicas.
+            </p>
+            <div class="meta-impacto">
+              <strong>Impacto Prático:</strong> Guia de rastreio de sinais de suporte e diretrizes de introdução alimentar para crianças com hipersensibilidade.
+            </div>
+          </div>
+        </div>
+
+        <div class="painel-tecnologia-social">
+          <h2>Por que a Tecnologia é Crucial para a Saúde Pública?</h2>
+          <p>
+            O SUS conta com uma infraestrutura robusta de serviços, mas a população muitas vezes não sabe como acessá-la ou desiste em meio à burocracia. O <strong>Neuro-Abraço</strong> atua como facilitador de acesso: uma aplicação leve, rápida e inclusiva que empodera a família atípica desde o momento da suspeita até as rotinas de acolhimento permanente.
+          </p>
+          <div class="botoes-grupo">
+            <a href="#" onclick="mostrarPagina('sus-guia')" class="btn btn-primario">Consultar Rede de Atendimento SUS</a>
+            <a href="#" onclick="mostrarPagina('academico')" class="btn btn-outline">Ver Texto Acadêmico para Revisão</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 3: REDE SUS & ATENDIMENTO ==================== -->
+    <section id="sus-guia" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Saúde Pública Gratuita</span>
+          <h1>Rede de Atendimento do SUS em São Paulo</h1>
+          <p class="subtitulo-secao">
+            Conheça as portas de entrada oficiais do Sistema Único de Saúde, os critérios de triagem e os principais polos de reabilitação neurofuncional.
+          </p>
+        </div>
+
+        <!-- SIMULADOR INTERATIVO DE FLUXO -->
+        <div class="fluxo-sus-interativo">
+          <h3>🧭 Qual é a sua necessidade atual? (Simulador de Rota no SUS)</h3>
+          <p>Selecione uma opção abaixo para saber para qual unidade pública você deve se dirigir:</p>
+          <div class="opcoes-fluxo">
+            <button class="btn-rota" onclick="exibirRota('suspeita')">👶 Primeira suspeita de autismo</button>
+            <button class="btn-rota" onclick="exibirRota('reabilitacao')">🧩 Diagnóstico confirmado / Precisa de terapias</button>
+            <button class="btn-rota" onclick="exibirRota('crise')">⚠️ Sofrimento psíquico intenso / Crises graves</button>
+          </div>
+          <div id="resultado-rota" class="caixa-resultado-rota" style="display:none;"></div>
+        </div>
+
+        <div class="grid-locais-sus">
+          <div class="card-local-sus">
+            <div class="badge-tipo porta-aberta">Porta Aberta (Sem encaminhamento)</div>
+            <h3>CAPSi — Centro de Atenção Psicossocial Infantojuvenil</h3>
+            <p><strong>Foco de Atuação:</strong> Acolhimento a crianças e adolescentes com intenso sofrimento psíquico, crises emocionais, desregulação severa ou comorbidades psiquiátricas.</p>
+            <p><strong>Como Acessar:</strong> Demanda espontânea ("porta aberta"). Os responsáveis podem ir diretamente à unidade mais próxima para acolhimento inicial e triagem com equipe multiprofissional.</p>
+            <p><strong>Equipe:</strong> Psiquiatras da infância, psicólogos, terapeutas ocupacionais, fonoaudiólogos e assistentes sociais.</p>
+          </div>
+
+          <div class="card-local-sus">
+            <div class="badge-tipo encaminhamento">Exige Encaminhamento Médico</div>
+            <h3>CER — Centro Especializado em Reabilitação</h3>
+            <p><strong>Foco de Atuação:</strong> Reabilitação intelectual, motora e sensorial. Foco no ganho de autonomia, comunicação alternativa, coordenação motora e integração sensorial.</p>
+            <p><strong>Como Acessar:</strong> Necessita de encaminhamento emitido por médico pediatra ou clínico geral da Unidade Básica de Saúde (UBS) do seu bairro através da regulação (SIGA Saúde).</p>
+            <p><strong>Equipe:</strong> Neuropediatras, fisioterapeutas, terapeutas ocupacionais com foco sensorial, fonoaudiólogos e psicopedagogos.</p>
+          </div>
+
+          <div class="card-local-sus">
+            <div class="badge-tipo conveniado">Instituição Conveniada SUS</div>
+            <h3>AMA — Associação de Amigos do Autista</h3>
+            <p><strong>Foco de Atuação:</strong> Atendimento terapêutico e educacional especializado 100% gratuito em cooperação com as Secretarias de Saúde e Educação do Estado de SP.</p>
+            <p><strong>Como Acessar:</strong> A criança precisa estar matriculada na rede pública e obter encaminhamento oficial das diretorias regionais de saúde ou assistência social.</p>
+            <p><strong>Recursos:</strong> Projetos com foco em todos os níveis de suporte, oficinas ocupacionais e apoio direto aos familiares.</p>
+          </div>
+        </div>
+
+        <div class="aviso-direitos-sus">
+          <h4>⚖️ Seus Direitos Assegurados por Lei</h4>
+          <p>
+            Pela <strong>Lei Berenice Piana (Lei nº 12.764/12)</strong> e pela <strong>Lei Brasileira de Inclusão (Lei nº 13.146/15)</strong>, a pessoa autista tem direito ao fornecimento de medicamentos pelo SUS, prioridade em atendimentos públicos e privados, obtenção da CIPTEA (Carteira de Identificação da Pessoa com TEA) e acompanhamento terapêutico multidisciplinar gratuito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 4: NÍVEIS DE SUPORTE ==================== -->
+    <section id="suporte" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Critérios Clínicos DSM-5</span>
+          <h1>Níveis de Suporte no Transtorno do Espectro Autista</h1>
+          <p class="subtitulo-secao">
+            No DSM-5, os níveis não medem valor ou capacidade intelectual, mas sim o grau de apoio e assistência que a pessoa necessita em sua rotina diária.
+          </p>
+        </div>
+
+        <div class="niveis-cards-grid">
+          <div class="card-nivel nivel-1-cor">
+            <div class="tag-nivel">Nível 1</div>
+            <h2>Necessitando de Apoio</h2>
+            <p class="nivel-resumo">Maior independência funcional, com desafios sutis de comunicação e adaptação a imprevistos.</p>
+            <hr>
+            <ul>
+              <li><strong>Comunicação Social:</strong> Inicia conversas, mas pode ter dificuldade em manter diálogos recíprocos e interpretar ironias ou pistas sociais não verbais.</li>
+              <li><strong>Flexibilidade & Rotina:</strong> Dificuldade para alternar entre tarefas e planejar rotinas. Mudanças bruscas podem gerar desorientação ou ansiedade.</li>
+              <li><strong>Apoio Típico:</strong> Suporte psicoterapêutico para habilidades sociais e manejo executivo de estudos ou trabalho.</li>
+            </ul>
+          </div>
+
+          <div class="card-nivel nivel-2-cor">
+            <div class="tag-nivel">Nível 2</div>
+            <h2>Necessitando de Apoio Substancial</h2>
+            <p class="nivel-resumo">Dificuldades evidentes na comunicação verbal e não verbal, necessitando de suporte frequente.</p>
+            <hr>
+            <ul>
+              <li><strong>Comunicação Social:</strong> Déficits notáveis na fala, vocabulário direcionado a interesses restritos e respostas atípicas a interações sociais.</li>
+              <li><strong>Comportamentos Rígidos:</strong> Inflexibilidade pronunciada para alterações de trajeto ou tarefas, além de movimentos estereotipados repetitivos.</li>
+              <li><strong>Apoio Típico:</strong> Terapia Ocupacional, Fonoaudiologia e acompanhante terapêutico (AT) no ambiente escolar.</li>
+            </ul>
+          </div>
+
+          <div class="card-nivel nivel-3-cor">
+            <div class="tag-nivel">Nível 3</div>
+            <h2>Necessitando de Apoio Muito Substancial</h2>
+            <p class="nivel-resumo">Necessidade de assistência intensiva e constante para atividades básicas da vida diária (AVDs).</p>
+            <hr>
+            <ul>
+              <li><strong>Comunicação Social:</strong> Expressão verbal ausente ou severamente reduzida a poucas palavras ou balbucios; necessita de Comunicação Alternativa e Aumentativa (CAA).</li>
+              <li><strong>Regulação Sensorial:</strong> Alta vulnerabilidade a sobrecargas sensoriais (ruídos, toques), com manifestação de crises de choro ou auto/heteroagressividade.</li>
+              <li><strong>Apoio Típico:</strong> Cuidado contínuo para higiene, alimentação, locomoção e terapias multidisciplinares diárias.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nota-clinica">
+          <strong>💡 Importante:</strong> O nível de suporte não é estático. Com intervenção precoce, estímulo contínuo e terapias baseadas em evidências (ABA, Fonoaudiologia, T.O. com integração sensorial), o indivíduo pode conquistar ganhos expressivos de autonomia ao longo da vida!
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 5: SAÚDE DOS CUIDADORES ==================== -->
+    <section id="cuidadores" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Saúde Mental & Bem-Estar Familiar</span>
+          <h1>Cuidando de Quem Cuida: A Família Atípica</h1>
+          <p class="subtitulo-secao">
+            A saúde integral preconizada pelo ODS 3 abrange também a saúde mental dos pais e cuidadores. O bem-estar do autista depende diretamente da sustentação emocional de sua rede de apoio.
+          </p>
+        </div>
+
+        <div class="grid-cuidadores">
+          <div class="card-cuidador">
+            <div class="icone-cuidador">🤍</div>
+            <h3>O Esgotamento do Cuidador (Burnout Parental)</h3>
+            <p>
+              A busca por laudos, as jornadas diárias de terapias, a sobrecarga burocrática e a vigilância constante geram exaustão crônica. No Brasil, pesquisas apontam que mais de 70% das mães atípicas relatam sintomas de sobrecarga severa e ansiedade.
+            </p>
+          </div>
+
+          <div class="card-cuidador">
+            <div class="icone-cuidador">🤝</div>
+            <h3>Grupos de Apoio e Fortalecimento Mútuo</h3>
+            <p>
+              O isolamento é o maior vilão da saúde mental materna e familiar. Integrar-se a associações comunitárias e círculos de acolhimento nos CAPSi e UBSs possibilita trocar experiências, direitos e sentimentos sem o medo de julgamentos sociais.
+            </p>
+          </div>
+
+          <div class="card-cuidador">
+            <div class="icone-cuidador">🌿</div>
+            <h3>Diretrizes de Autocuidado Viável</h3>
+            <p>
+              Autocuidado não é luxo, é sobrevivência: pausas programadas durante a rotina, divisão de tarefas entre parceiros ou familiares, busca por psicoterapia individual pelo SUS e valorização dos pequenos avanços cotidianos.
+            </p>
+          </div>
+        </div>
+
+        <div class="caixa-ajuda-urgente">
+          <h4>Precisa de Apoio Emocional Imediato?</h4>
+          <p>Se você está enfrentando sobrecarga emocional extrema ou pensamentos de desespero, procure acolhimento:</p>
+          <ul>
+            <li><strong>CVV (Centro de Valorização da Vida):</strong> Ligue <strong>188</strong> (Ligação gratuita, 24 horas, sigiloso).</li>
+            <li><strong>CAPS Adulto mais próximo:</strong> Atendimento de acolhimento gratuito em saúde mental sem necessidade de agendamento prévio.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 6: NUTRIÇÃO & REGULAÇÃO ==================== -->
+    <section id="nutricao" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Saúde Preventiva (ODS 3.d)</span>
+          <h1>Nutrição, Seletividade Alimentar e TEA</h1>
+          <p class="subtitulo-secao">
+            A alimentação no autismo envolve fatores neurológicos, sensoriais e gastrointestinais. Entenda como construir uma relação equilibrada com a comida sem forçar a criança.
+          </p>
+        </div>
+
+        <div class="grid-nutricao">
+          <div class="card-nutricao">
+            <h3>Por que ocorre a seletividade alimentar?</h3>
+            <p>Não se trata de "frescura" ou birra infantil. Trata-se de hipersensibilidade a texturas (alimentos pastosos, grudentos ou crocantes), aversão a cores específicas, rigidez com a apresentação do prato e desconfortos digestivos frequentes (como refluxo ou constipação crônica).</p>
+          </div>
+
+          <div class="card-nutricao">
+            <h3>Estratégias de Introdução Gradual</h3>
+            <ul>
+              <li><strong>Hierarquia de Tolerância:</strong> Tolerar o alimento na mesa → tocar com os talheres → cheirar → provar com a ponta da língua → engolir.</li>
+              <li><strong>Previsibilidade:</strong> Servir sempre um alimento já aceito e seguro junto a um alimento novo para diminuir a angústia da criança.</li>
+              <li><strong>Ambiente Confortável:</strong> Reduzir barulhos e telas durante as refeições, ajustando os apoios de pés da cadeira para dar estabilidade postural.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alerta-nutricional">
+          <strong>⚠️ Importante:</strong> Dietas restritivas (como a isenção total de glúten ou caseína) só devem ser implementadas com acompanhamento de médico gastroenterologista ou nutricionista especializado, prevenindo desnutrição ou déficits de crescimento infantil.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 7: LAZER SENSORIAL ==================== -->
+    <section id="lazer" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Inclusão Urbana & Lazer Adaptado</span>
+          <h1>Lazer e Espaços Sensoriais em São Paulo</h1>
+          <p class="subtitulo-secao">
+            O lazer é parte fundamental da saúde mental e do bem-estar biopsicossocial. Conheça espaços com estrutura inclusiva na capital paulista.
+          </p>
+        </div>
+
+        <div class="grid-lazer">
+          <div class="card-lazer">
+            <h4>🌳 Parques Ecológicos e Áreas Verdes</h4>
+            <p><strong>Parque da Cantareira & Villa-Lobos:</strong> Áreas com ampla cobertura vegetal, ventilação e baixo ruído urbano nos dias de semana, ideais para caminhadas sensoriais e regulação motora.</p>
+          </div>
+
+          <div class="card-lazer">
+            <h4>🎬 Sessões de Cinema Azul / Adaptadas</h4>
+            <p><strong>Redes Cinemark, Kinoplex e Cinépolis:</strong> Exibições com luzes suavemente acesas, volume de som reduzido em 50%, sem comerciais iniciais e total liberdade para caminhar e falar na sala.</p>
+          </div>
+
+          <div class="card-lazer">
+            <h4>🏛️ Museus Acessíveis & Interativos</h4>
+            <p><strong>Museu Catavento & Museu da Imaginação:</strong> Visitas educativas com horários preferenciais para pessoas autistas e colaboradores treinados para acolhimento neurodivergente.</p>
+          </div>
+        </div>
+
+        <div class="dica-passeio">
+          <strong>Dica Prática:</strong> Leve sempre a carteirinha CIPTEA ou cópia do laudo médico para ter direito às gratuidades e filas prioritárias, além de fones abafadores de ruído e objetos de regulação sensorial (fidget toys).
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PÁGINA 8: ENTREGA ACADÊMICA FMU ==================== -->
+    <section id="academico" class="pagina">
+      <div class="conteudo-container">
+        <button class="btn-voltar" onclick="mostrarPagina('index')">← Voltar ao Início</button>
+        <div class="cabecalho-secao">
+          <span class="categoria-tag">Avaliação Docente • Prof. Rafael Bonangelo</span>
+          <h1>Documento Acadêmico — Entrega Parcial ODS 3</h1>
+          <p class="subtitulo-secao">
+            Texto formal estruturado com as 4 seções solicitadas para revisão pedagógica na disciplina de Front-End com UX/UI / Projetos ODS.
+          </p>
+        </div>
+
+        <div class="documento-academico-painel">
+          <div class="doc-bloco">
+            <h2>1. Introdução</h2>
+            <p>
+              O Transtorno do Espectro Autista (TEA) é uma condição do neurodesenvolvimento definida por alterações na comunicação social, linguagem, interação e padrões de comportamentos repetitivos (DSM-5). No Brasil, milhões de cidadãos vivenciam o espectro, enfrentando barreiras como a falta de triagem rápida nas Unidades Básicas de Saúde, rotas de atendimento difusas no SUS e extrema sobrecarga de cuidadores primários. O <strong>Neuro-Abraço</strong> foi concebido como um protótipo de inovação digital e tecnologia social para democratizar o acesso a informações essenciais, orientar o itinerário nos serviços públicos e promover a saúde integral de indivíduos autistas e suas famílias.
+            </p>
+          </div>
+
+          <div class="doc-bloco">
+            <h2>2. Objetivo</h2>
+            <p><strong>Objetivo Geral:</strong> Desenvolver um protótipo digital interativo de saúde pública e apoio socioemocional voltado ao TEA, alinhado ao <strong>Objetivo de Desenvolvimento Sustentável 3 (Saúde e Bem-Estar)</strong> da Agenda 2030 da ONU.</p>
+            <p><strong>Objetivos Específicos:</strong></p>
+            <ul>
+              <li>Mapear as portas de entrada e fluxos de atendimento gratuito do SUS em São Paulo (CAPSi e CER).</li>
+              <li>Apoiar a saúde mental de mães e cuidadores familiares, prevenindo o esgotamento físico e psíquico.</li>
+              <li>Disseminar esclarecimentos didáticos sobre os níveis de suporte (1, 2 e 3 do DSM-5) e nutrição sensorial adaptada.</li>
+              <li>Implementar uma interface com acessibilidade digital (WCAG), baixo ruído cognitivo e usabilidade para a neurodiversidade.</li>
+            </ul>
+          </div>
+
+          <div class="doc-bloco">
+            <h2>3. Contexto</h2>
+            <p>
+              Apesar do suporte legal da <strong>Lei Berenice Piana (Lei nº 12.764/2012)</strong> e da Lei Brasileira de Inclusão, o cenário prático da saúde pública enfrenta atrasos no diagnóstico infantil, filas para avaliações com neuropediatras e psiquiatras, e carência de plataformas amigáveis que guiem a população vulnerável. O isolamento social e a desinformação fragilizam a saúde coletiva. O Neuro-Abraço atua diretamente nessa lacuna, servindo como uma ferramenta digital de cidadania e acesso universal à saúde.
+            </p>
+          </div>
+
+          <div class="doc-bloco">
+            <h2>4. ODS - Textos para Revisão</h2>
+            <p>
+              O projeto vincula-se formalmente ao <strong>ODS 3 da ONU: "Assegurar uma vida saudável e promover o bem-estar para todas e todos, em todas as idades"</strong>:
+            </p>
+            <ul>
+              <li><strong>Meta 3.4 (Saúde Mental e Bem-Estar):</strong> Mitigação do sofrimento psíquico de autistas e prevenção da síndrome de burnout em cuidadores familiares através de suporte e informação qualificada.</li>
+              <li><strong>Meta 3.8 (Acesso Universal aos Serviços de Saúde):</strong> Orientação sobre terapias multidisciplinares gratuitas garantidas pelo SUS nos CERs e CAPSi, protegendo famílias de despesas catastróficas.</li>
+              <li><strong>Meta 3.d (Alerta Precoce e Prevenção):</strong> Conscientização precoce sobre sinais de suporte e diretrizes nutricionais que evitam comorbidades clínicas severas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bloco-doc-acao">
+          <p>Professor Rafael Bonangelo, este documento compõe a entrega parcial para revisão de texto e validação do protótipo digital.</p>
+          <a href="mailto:rafael.bonangelo@fmu.br?subject=[ADS - FMU] Entrega Parcial ODS 3 - Projeto Neuro-Abraço" class="btn btn-primario">✉️ Enviar Notificação por E-mail ao Professor</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ ACADÊMICO -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Neuro-Abraço • ODS 3</h3>
+        <p>Protótipo de saúde pública e bem-estar integral para a comunidade neurodivergente.</p>
+        <span class="badge-fmu">Centro Universitário FMU • 2026</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação Rápida</h4>
+        <ul>
+          <li><a href="#" onclick="mostrarPagina('ods3')">Alinhamento ODS 3</a></li>
+          <li><a href="#" onclick="mostrarPagina('sus-guia')">Rede SUS São Paulo</a></li>
+          <li><a href="#" onclick="mostrarPagina('suporte')">Níveis de Apoio DSM-5</a></li>
+          <li><a href="#" onclick="mostrarPagina('cuidadores')">Saúde dos Cuidadores</a></li>
+          <li><a href="#" onclick="mostrarPagina('academico')">Documento Acadêmico</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Equipe de Desenvolvimento</h4>
+        <p>Robson Junior Farias e Equipe Neuro-Abraço</p>
+        <p>Curso de Análise e Desenvolvimento de Sistemas</p>
+        <p>Orientador: Prof. Rafael Bonangelo</p>
+        <p>Contato: <code>fariasjuniorrobson@gmail.com</code></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Neuro-Abraço • Projeto de Extensão & Sustentabilidade FMU. Código aberto para a saúde coletiva.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
